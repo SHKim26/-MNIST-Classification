@@ -11,6 +11,8 @@ shkim@ds.seoultech.ac.kr
 
 This project designs and implements two neural network models, LeNet-5 and CustomMLP, for the MNIST classification. Both models were designed to have a similar number of parameters. **The LeNet-5 model achieved a classification accuracy exceeding 98%, as typically expected.** In contrast, the CustomMLP model recorded an accuracy of 95%. **Batch normalization and Dropout techniques** were applied to LeNet-5 to enhance its generalization performance on the test dataset.
 
+# Report
+
 ## Lenet-5 
 ![Lenet-5](./images/lenet5.png)
 
