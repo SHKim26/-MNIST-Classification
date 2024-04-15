@@ -7,10 +7,8 @@
 </p>
 
 <p align="center">
-  <img src="./images/lenet5.png" width="500" height="500"/>
+  <img src="./images/lenet5_result.png" width="500" height="500"/>
 </p>
-
-![Lenet-5](./images/lenet5_result.png)
 
 ## Custom MLP
 
