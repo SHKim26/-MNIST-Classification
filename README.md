@@ -18,7 +18,9 @@
 
 ## Lenet-5_Regularized
 
-![Lenet-5](./images/lenet5_regularized.png)
+<p align="center">
+  <img src="./images/lenet5_regularized.png" width="500" height="500"/>
+</p>
 
 ![Lenet-5](./images/lenet5_regularized_result.png)
 
