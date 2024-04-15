@@ -24,9 +24,9 @@ The LeNet-5 model consists of convolutional layers followed by fully connected l
 - **Kernel Size:** 5x5
 - **Padding:** 2
 - **Parameters:** Calculation of weights and biases:
-  - **Weights:** \(5 \times 5 \times 1 \times 6 = 150\)
+  - **Weights:** 5 * 5 * 1 * 6 = 150
   - **Biases:** 6
-  - **Total for conv1:** \(150 + 6 = 156\)
+  - **Total for conv1:** 150 + 6 = 156
 
 #### First Pooling Layer (`pool1`):
 - **Type:** Max Pooling
@@ -39,9 +39,9 @@ The LeNet-5 model consists of convolutional layers followed by fully connected l
 - **Output Channels:** 16
 - **Kernel Size:** 5x5
 - **Parameters:** Calculation of weights and biases:
-  - **Weights:** \(5 \times 5 \times 6 \times 16 = 2,400\)
+  - **Weights:** 5 * 5 * 6 * 16 = 2,400
   - **Biases:** 16
-  - **Total for conv2:** \(2,400 + 16 = 2,416\)
+  - **Total for conv2:** 2,400 + 16 = 2,416
 
 #### Second Pooling Layer (`pool2`):
 - **Type:** Max Pooling
@@ -50,37 +50,33 @@ The LeNet-5 model consists of convolutional layers followed by fully connected l
 - **Parameters:** 0
 
 #### First Fully Connected Layer (`fc1`):
-- **Input Features:** 16 \times 5 \times 5 = 400
+- **Input Features:** 16 * 5 * 5 = 400
 - **Output Features:** 120
 - **Parameters:** Calculation of weights and biases:
-  - **Weights:** \(400 \times 120 = 48,000\)
+  - **Weights:** 400 * 120 = 48,000
   - **Biases:** 120
-  - **Total for fc1:** \(48,000 + 120 = 48,120\)
+  - **Total for fc1:** 48,000 + 120 = 48,120
 
 #### Second Fully Connected Layer (`fc2`):
 - **Input Features:** 120
 - **Output Features:** 84
 - **Parameters:** Calculation of weights and biases:
-  - **Weights:** \(120 \times 84 = 10,080\)
+  - **Weights:** 120 * 84 = 10,080
   - **Biases:** 84
-  - **Total for fc2:** \(10,080 + 84 = 10,164\)
+  - **Total for fc2:** 10,080 + 84 = 10,164
 
 #### Third Fully Connected Layer (`fc3`):
 - **Input Features:** 84
 - **Output Features:** 10
 - **Parameters:** Calculation of weights and biases:
-  - **Weights:** \(84 \times 10 = 840\)
+  - **Weights:** 84 * 10 = 840
   - **Biases:** 10
-  - **Total for fc3:** \(840 + 10 = 850\)
+  - **Total for fc3:** 840 + 10 = 850
 
 ### Total Parameters Calculation
 Adding all the parameters from each layer, we get:
 
-- **fc1:** 48,120
-- **fc2:** 10,164
-- **fc3:** 850
-- **Convolutions and Poolings:** 156 + 2,416
-- **Total Parameters for LeNet-5:** 48,120 + 10,164 + 850 + 156 + 2,416 = 61,706
+- **Total Parameters for LeNet-5:** 156 + 2,416 + 48,120 + 10,164 + 850 = 61,706
 
 ![Lenet-5](./images/lenet5_result.png)
 
@@ -96,17 +92,17 @@ The CustomMLP model consists of several fully connected layers, as described:
 - **Input Features:** 784 (flattened 28x28 image)
 - **Output Features:** 64
 - **Parameters:** Calculation of weights and biases:
-  - **Weights:** \(784 \times 64 = 50,176\)
+  - **Weights:** 784 * 64 = 50,176
   - **Biases:** 64
-  - **Total for fc1:** \(50,176 + 64 = 50,240\)
+  - **Total for fc1:** 50,176 + 64 = 50,240
 
 #### Second Fully Connected Layer (`fc2`):
 - **Input Features:** 64
 - **Output Features:** 64
 - **Parameters:** Calculation of weights and biases:
-  - **Weights:** \(64 \times 64 = 4,096\)
+  - **Weights:** 64 * 64 = 4,096
   - **Biases:** 64
-  - **Total for fc2:** \(4,096 + 64 = 4,160\)
+  - **Total for fc2:** 4,096 + 64 = 4,160
 
 #### Third Fully Connected Layer (`fc3`):
 - **Input Features:** 64
@@ -118,37 +114,30 @@ The CustomMLP model consists of several fully connected layers, as described:
 - **Input Features:** 64
 - **Output Features:** 32
 - **Parameters:**
-  - **Weights:** \(64 \times 32 = 2,048\)
+  - **Weights:** 64 * 32 = 2,048
   - **Biases:** 32
-  - **Total for fc4:** \(2,048 + 32 = 2,080\)
+  - **Total for fc4:** 2,048 + 32 = 2,080
 
 #### Fifth Fully Connected Layer (`fc5`):
 - **Input Features:** 32
 - **Output Features:** 16
 - **Parameters:**
-  - **Weights:** \(32 \times 16 = 512\)
+  - **Weights:** 32 * 16 = 512
   - **Biases:** 16
-  - **Total for fc5:** \(512 + 16 = 528\)
+  - **Total for fc5:** 512 + 16 = 528
 
 #### Sixth Fully Connected Layer (`fc6`):
 - **Input Features:** 16
 - **Output Features:** 10
 - **Parameters:**
-  - **Weights:** \(16 \times 10 = 160\)
+  - **Weights:** 16 * 10 = 160
   - **Biases:** 10
-  - **Total for fc6:** \(160 + 10 = 170\)
+  - **Total for fc6:** 160 + 10 = 170
 
 ### Total Parameters Calculation
 Adding all the parameters from each layer, we get:
 
-- **fc1:** 50,240
-- **fc2:** 4,160
-- **fc3:** 4,160
-- **fc4:** 2,080
-- **fc5:** 528
-- **fc6:** 170
 - **Total Parameters for CustomMLP:** 50,240 + 4,160 + 4,160 + 2,080 + 528 + 170 = 61,338
-
 
 ![Lenet-5](./images/custom_mlp_result.png)
 
