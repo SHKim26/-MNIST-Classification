@@ -2,7 +2,7 @@
 인공신경망과 딥러닝 Assignment #2
 
 ## Lenet-5 
-<img src="./images/lenet5.png" width="200" height="300"/>
+<img src="./images/lenet5.png" width="500" height="500"/>
 
 ![Lenet-5](./images/lenet5_result.png)
 
