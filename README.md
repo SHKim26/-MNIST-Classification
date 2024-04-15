@@ -11,3 +11,14 @@
 ![Lenet-5](./images/custom_mlp.png)
 
 ![Lenet-5](./images/custom_mlp_result.png)
+
+## Lenet-5_Regularized
+
+![Lenet-5](./images/lenet5_regularized.png)
+
+![Lenet-5](./images/lenet5_regularized_result.png)
+
+## Results
+
+![Lenet-5](./images/full_result.png)
+
