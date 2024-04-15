@@ -14,9 +14,8 @@ This project designs and implements two neural network models, LeNet-5 and Custo
 # Report
 
 ## Lenet-5 
-![Lenet-5](./images/lenet5.png)
-
 ### LeNet-5 Model Architecture
+![Lenet-5](./images/lenet5.png)
 
 The LeNet-5 model consists of convolutional layers followed by fully connected layers, each designed for image recognition tasks. Below are the details regarding the architecture and the calculation of parameters for each layer:
 
@@ -80,13 +79,18 @@ Adding all the parameters from each layer, we get:
 
 - **Total Parameters for LeNet-5:** 156 + 2,416 + 48,120 + 10,164 + 850 = 61,706
 
+### Result
+
+The models were trained for 15 epochs using the described structures, and the following results were obtained
+
 ![Lenet-5](./images/lenet5_result.png)
 
 ## Custom MLP
 
-![Lenet-5](./images/custom_mlp.png)
-
 ### CustomMLP Model Architecture
+
+
+![Lenet-5](./images/custom_mlp.png)
 
 The CustomMLP model consists of several fully connected layers, as described:
 
@@ -141,6 +145,10 @@ Adding all the parameters from each layer, we get:
 
 - **Total Parameters for CustomMLP:** 50,240 + 4,160 + 4,160 + 2,080 + 528 + 170 = 61,338
 
+### Result
+
+The models were trained for 15 epochs using the described structures, and the following results were obtained
+
 ![Lenet-5](./images/custom_mlp_result.png)
 
 ## Lenet-5_Regularized
@@ -179,9 +187,9 @@ Dropout is a regularization method that randomly sets a fraction of input units 
   - **Structure:** `nn.Dropout(0.2), nn.Linear(84, 10)`
   - **Details:** Similar to `fc2`, Dropout precedes the final classification layer, which maps the 84 inputs to 10 output classes. This helps in mitigating overfitting even at the final stage of decision-making.
 
-### Conclusion
+### Result
 
-The integration of Batch Normalization and Dropout in the `LeNet5_Regularized` model not only stabilizes the training process but also improves the model's ability to generalize from training data to unseen data. This combination is particularly effective in deep learning models prone to overfitting and dealing with high-dimensional data.
+By employing two regularization techniques, higher generalization performance was achieved.
 
 ![Lenet-5](./images/lenet5_regularized_result.png)
 
