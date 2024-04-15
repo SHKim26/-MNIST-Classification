@@ -4,20 +4,29 @@
 Assignment #2
 
 24510101 김상훈 
+
 shkim@ds.seoultech.ac.kr
+
+# Abstract
+
+This project designs and implements two neural network models, LeNet-5 and CustomMLP, for the MNIST digit classification task. Both models were designed to have a similar number of parameters. **The LeNet-5 model achieved a classification accuracy exceeding 98%, as typically expected.** In contrast, the CustomMLP model recorded an accuracy of 95%. **Batch normalization and dropout techniques** were applied to LeNet-5 to enhance its generalization performance on the test dataset.
 
 ## Lenet-5 
 ![Lenet-5](./images/lenet5.png)
 
-### LeNet-5 Model Architecture Details
+### LeNet-5 Model Architecture
+
+The LeNet-5 model consists of convolutional layers followed by fully connected layers, each designed for image recognition tasks. Below are the details regarding the architecture and the calculation of parameters for each layer:
 
 #### First Convolutional Layer (`conv1`):
 - **Input Channels:** 1 (grayscale image)
 - **Output Channels:** 6
 - **Kernel Size:** 5x5
 - **Padding:** 2
-- **Parameters:** \( (5 \times 5 \times 1 \times 6) + 6 \) (weights + biases)
-- **Total:** 150 + 6 = 156
+- **Parameters:** Calculation of weights and biases:
+  - **Weights:** \(5 \times 5 \times 1 \times 6 = 150\)
+  - **Biases:** 6
+  - **Total for conv1:** \(150 + 6 = 156\)
 
 #### First Pooling Layer (`pool1`):
 - **Type:** Max Pooling
@@ -29,8 +38,10 @@ shkim@ds.seoultech.ac.kr
 - **Input Channels:** 6
 - **Output Channels:** 16
 - **Kernel Size:** 5x5
-- **Parameters:** \( (5 \times 5 \times 6 \times 16) + 16 \)
-- **Total:** 2,400 + 16 = 2,416
+- **Parameters:** Calculation of weights and biases:
+  - **Weights:** \(5 \times 5 \times 6 \times 16 = 2,400\)
+  - **Biases:** 16
+  - **Total for conv2:** \(2,400 + 16 = 2,416\)
 
 #### Second Pooling Layer (`pool2`):
 - **Type:** Max Pooling
@@ -41,23 +52,35 @@ shkim@ds.seoultech.ac.kr
 #### First Fully Connected Layer (`fc1`):
 - **Input Features:** 16 \times 5 \times 5 = 400
 - **Output Features:** 120
-- **Parameters:** \(400 \times 120 + 120\)
-- **Total:** 48,000 + 120 = 48,120
+- **Parameters:** Calculation of weights and biases:
+  - **Weights:** \(400 \times 120 = 48,000\)
+  - **Biases:** 120
+  - **Total for fc1:** \(48,000 + 120 = 48,120\)
 
 #### Second Fully Connected Layer (`fc2`):
 - **Input Features:** 120
 - **Output Features:** 84
-- **Parameters:** \(120 \times 84 + 84\)
-- **Total:** 10,080 + 84 = 10,164
+- **Parameters:** Calculation of weights and biases:
+  - **Weights:** \(120 \times 84 = 10,080\)
+  - **Biases:** 84
+  - **Total for fc2:** \(10,080 + 84 = 10,164\)
 
 #### Third Fully Connected Layer (`fc3`):
 - **Input Features:** 84
 - **Output Features:** 10
-- **Parameters:** \(84 \times 10 + 10\)
-- **Total:** 840 + 10 = 850
+- **Parameters:** Calculation of weights and biases:
+  - **Weights:** \(84 \times 10 = 840\)
+  - **Biases:** 10
+  - **Total for fc3:** \(840 + 10 = 850\)
 
-### Total Parameters for LeNet-5:
-- **Total:** 156 + 2,416 + 48,120 + 10,164 + 850 = 61,706
+### Total Parameters Calculation
+Adding all the parameters from each layer, we get:
+
+- **fc1:** 48,120
+- **fc2:** 10,164
+- **fc3:** 850
+- **Convolutions and Poolings:** 156 + 2,416
+- **Total Parameters for LeNet-5:** 48,120 + 10,164 + 850 + 156 + 2,416 = 61,706
 
 ![Lenet-5](./images/lenet5_result.png)
 
