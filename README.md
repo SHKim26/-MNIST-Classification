@@ -133,6 +133,42 @@ Adding all the parameters from each layer, we get:
 
 ![Lenet-5](./images/lenet5_regularized.png)
 
+### Regularization Techniques in the LeNet5_Regularized Model
+
+The `LeNet5_Regularized` model incorporates advanced regularization techniques to improve model robustness and generalization. These techniques include Batch Normalization and Dropout, which are applied to various layers within the network. Here is an overview of where and how these techniques are implemented:
+
+#### Batch Normalization
+
+Batch Normalization (BatchNorm) is applied to standardize the inputs to each layer within the network. By normalizing the input layer activations, BatchNorm stabilizes the learning process and significantly reduces the number of training epochs required to converge.
+
+- **First Convolutional Layer (`conv1`):**
+  - **Structure:** `nn.Conv2d(1, 6, 5, padding=2), nn.BatchNorm2d(6)`
+  - **Details:** After applying a 5x5 convolutional filter with padding, BatchNorm is applied to the 6 feature maps output by the convolution. This helps in normalizing the outputs, accelerating the training and enabling higher learning rates.
+
+- **Second Convolutional Layer (`conv2`):**
+  - **Structure:** `nn.Conv2d(6, 16, 5), nn.BatchNorm2d(16)`
+  - **Details:** Similar to the first layer, after the convolution that increases the depth from 6 to 16, BatchNorm is used to normalize the outputs of the convolutional layer. This reduces internal covariate shift and improves the training dynamics.
+
+#### Dropout
+
+Dropout is a regularization method that randomly sets a fraction of input units to 0 at each update during training time, which helps prevent overfitting. The dropout rate specified in this model is 0.2 (20%).
+
+- **First Fully Connected Layer (`fc1`):**
+  - **Structure:** `nn.Linear(16 * 5 * 5, 120), nn.Dropout(0.2)`
+  - **Details:** After mapping the flattened feature maps to 120 outputs, Dropout is applied. This discourages complex co-adaptations on training data.
+
+- **Second Fully Connected Layer (`fc2`):**
+  - **Structure:** `nn.Dropout(0.2), nn.Linear(120, 84)`
+  - **Details:** Dropout is applied right before the linear transformation to 84 units. This positioning ensures that the network retains robustness to input noise and variance.
+
+- **Third Fully Connected Layer (`fc3`):**
+  - **Structure:** `nn.Dropout(0.2), nn.Linear(84, 10)`
+  - **Details:** Similar to `fc2`, Dropout precedes the final classification layer, which maps the 84 inputs to 10 output classes. This helps in mitigating overfitting even at the final stage of decision-making.
+
+### Conclusion
+
+The integration of Batch Normalization and Dropout in the `LeNet5_Regularized` model not only stabilizes the training process but also improves the model's ability to generalize from training data to unseen data. This combination is particularly effective in deep learning models prone to overfitting and dealing with high-dimensional data.
+
 ![Lenet-5](./images/lenet5_regularized_result.png)
 
 ## Results
