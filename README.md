@@ -7,8 +7,9 @@
 </p>
 
 
-![Lenet-5](./images/lenet5_result.png)
-
+<p align="center">
+ <img src = "./images/lenet5_result.png", width="650", height="400">
+</p>
 ## Custom MLP
 
 ![Lenet-5](./images/custom_mlp.png)
