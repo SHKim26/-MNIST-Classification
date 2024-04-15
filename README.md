@@ -65,6 +65,68 @@ shkim@ds.seoultech.ac.kr
 
 ![Lenet-5](./images/custom_mlp.png)
 
+### CustomMLP Model Architecture
+
+The CustomMLP model consists of several fully connected layers, as described:
+
+#### First Fully Connected Layer (`fc1`):
+- **Input Features:** 784 (flattened 28x28 image)
+- **Output Features:** 64
+- **Parameters:** Calculation of weights and biases:
+  - **Weights:** \(784 \times 64 = 50,176\)
+  - **Biases:** 64
+  - **Total for fc1:** \(50,176 + 64 = 50,240\)
+
+#### Second Fully Connected Layer (`fc2`):
+- **Input Features:** 64
+- **Output Features:** 64
+- **Parameters:** Calculation of weights and biases:
+  - **Weights:** \(64 \times 64 = 4,096\)
+  - **Biases:** 64
+  - **Total for fc2:** \(4,096 + 64 = 4,160\)
+
+#### Third Fully Connected Layer (`fc3`):
+- **Input Features:** 64
+- **Output Features:** 64
+- **Parameters:** Same as fc2
+  - **Total for fc3:** 4,160
+
+#### Fourth Fully Connected Layer (`fc4`):
+- **Input Features:** 64
+- **Output Features:** 32
+- **Parameters:**
+  - **Weights:** \(64 \times 32 = 2,048\)
+  - **Biases:** 32
+  - **Total for fc4:** \(2,048 + 32 = 2,080\)
+
+#### Fifth Fully Connected Layer (`fc5`):
+- **Input Features:** 32
+- **Output Features:** 16
+- **Parameters:**
+  - **Weights:** \(32 \times 16 = 512\)
+  - **Biases:** 16
+  - **Total for fc5:** \(512 + 16 = 528\)
+
+#### Sixth Fully Connected Layer (`fc6`):
+- **Input Features:** 16
+- **Output Features:** 10
+- **Parameters:**
+  - **Weights:** \(16 \times 10 = 160\)
+  - **Biases:** 10
+  - **Total for fc6:** \(160 + 10 = 170\)
+
+### Total Parameters Calculation
+Adding all the parameters from each layer, we get:
+
+- **fc1:** 50,240
+- **fc2:** 4,160
+- **fc3:** 4,160
+- **fc4:** 2,080
+- **fc5:** 528
+- **fc6:** 170
+- **Total Parameters for CustomMLP:** 50,240 + 4,160 + 4,160 + 2,080 + 528 + 170 = 61,338
+
+
 ![Lenet-5](./images/custom_mlp_result.png)
 
 ## Lenet-5_Regularized
