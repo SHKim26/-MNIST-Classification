@@ -153,9 +153,9 @@ The models were trained for 15 epochs using the described structures, and the fo
 
 ## Lenet-5_Regularized
 
-![Lenet-5](./images/lenet5_regularized.png)
-
 ### Regularization Techniques in the LeNet5_Regularized Model
+
+![Lenet-5](./images/lenet5_regularized.png)
 
 The `LeNet5_Regularized` model incorporates advanced regularization techniques to improve model robustness and generalization. These techniques include Batch Normalization and Dropout, which are applied to various layers within the network. Here is an overview of where and how these techniques are implemented:
 
