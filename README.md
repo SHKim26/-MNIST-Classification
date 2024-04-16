@@ -9,7 +9,7 @@ shkim@ds.seoultech.ac.kr
 
 # Abstract
 
-This project designs and implements two neural network models, LeNet-5 and CustomMLP, for the MNIST classification. Both models were designed to have a similar number of parameters. **The LeNet-5 model achieved a classification accuracy exceeding 98%, as typically expected.** In contrast, the CustomMLP model recorded an accuracy of 95%. **Batch normalization and Dropout techniques** were applied to LeNet-5 to enhance its generalization performance.
+This project designs and implements two neural network models, LeNet-5 and CustomMLP, for the MNIST classification. Both models were designed to have a similar number of parameters. **The LeNet-5 model achieved a classification accuracy exceeding 98%, as typically expected.** In contrast, the Custom MLP model recorded an accuracy of 95%. **Batch normalization and Dropout techniques** were applied to LeNet-5 to enhance its generalization performance.
 
 # Report
 
@@ -87,12 +87,12 @@ The models were trained for 15 epochs using the described structures, and the fo
 
 ## Custom MLP
 
-### CustomMLP Model Architecture
+### Custom MLP Model Architecture
 
 
 ![Lenet-5](./images/custom_mlp.png)
 
-The CustomMLP model consists of several fully connected layers, as described:
+The Custom MLP model consists of several fully connected layers, as described:
 
 #### First Fully Connected Layer (`fc1`):
 - **Input Features:** 784 (flattened 28x28 image)
@@ -197,3 +197,4 @@ By employing two regularization techniques, higher generalization performance wa
 
 ![Lenet-5](./images/full_result.png)
 
+The results, plotted across epochs for the training and testing losses and accuracies of three models—LeNet-5, Custom MLP, and LeNet-5_Regularized—reveal that **overall performance ranks highest to lowest as follows: LeNet-5_Regularized, LeNet-5, and Custom MLP**. Notably, **the LeNet-5_Regularized model, which incorporates batch normalization and dropout, learns faster and achieves better final performance** compared to the LeNet-5 model
