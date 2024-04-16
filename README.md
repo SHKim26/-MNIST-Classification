@@ -189,7 +189,7 @@ Dropout is a regularization method that randomly sets a fraction of input units 
 
 ### Result
 
-**Despite a lower Final Train Accuracy of 98.73%** (vs 99.01%), the application of two regularization techniques resulted in **a higher Final Test Accuracy of 98.81%** (vs 98.73%).
+**Despite a lower Train Accuracy of 98.73%** (vs 99.01%), the application of two regularization techniques resulted in **a higher Test Accuracy of 98.81%** (vs 98.73%).
 
 ![Lenet-5](./images/lenet5_regularized_result.png)
 
@@ -197,4 +197,4 @@ Dropout is a regularization method that randomly sets a fraction of input units 
 
 ![Lenet-5](./images/full_result.png)
 
-The results, plotted across epochs, show the training and testing loss and accuracy for three models. **Overall performance ranks  in the following order: LeNet-5_Regularized, LeNet-5, and Custom MLP**. Notably, **the LeNet-5_Regularized model**, which includes batch normalization and dropout, **not only learns faster but also achieves better final performance** compared to LeNet-5.
+The results, plotted across epochs, show the training and testing loss and accuracy for three models. **Overall performance ranks  in the following order: LeNet-5_Regularized, LeNet-5, and Custom MLP**. Notably, **the LeNet-5_Regularized model**, which includes batch normalization and dropout, **not only learns faster but also achieves better performance** compared to LeNet-5.
