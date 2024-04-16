@@ -9,7 +9,7 @@ shkim@ds.seoultech.ac.kr
 
 # Abstract
 
-This project designs and implements two neural network models, LeNet-5 and CustomMLP, for the MNIST classification. Both models were designed to have a similar number of parameters. **The LeNet-5 model achieved a classification accuracy exceeding 98%, as typically expected.** In contrast, the Custom MLP model recorded an accuracy of 95%. **Batch normalization and Dropout techniques** were applied to LeNet-5 to enhance its generalization performance.
+This project designs and implements two neural network models, LeNet-5 and Custom MLP, for the MNIST classification. Both models were designed to have a similar number of parameters. **The LeNet-5 model achieved a classification accuracy exceeding 98%, as typically expected.** In contrast, the Custom MLP model recorded an accuracy of 95%. **Batch normalization and Dropout techniques** were applied to LeNet-5 to enhance its generalization performance.
 
 # Report
 
@@ -143,7 +143,7 @@ The Custom MLP model consists of several fully connected layers, as described:
 ### Total Parameters Calculation
 Adding all the parameters from each layer, we get:
 
-- **Total Parameters for CustomMLP:** 50,240 + 4,160 + 4,160 + 2,080 + 528 + 170 = 61,338
+- **Total Parameters for Custom MLP:** 50,240 + 4,160 + 4,160 + 2,080 + 528 + 170 = 61,338
 
 ### Result
 
