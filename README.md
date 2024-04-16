@@ -75,7 +75,7 @@ The LeNet-5 model consists of convolutional layers followed by fully connected l
   - **Total for fc3:** 840 + 10 = 850
 
 ### Total Parameters Calculation
-Adding all the parameters from each layer, we get:
+Adding all the parameters from each layer:
 
 - **Total Parameters for LeNet-5:** 156 + 2,416 + 48,120 + 10,164 + 850 = 61,706
 
@@ -141,7 +141,7 @@ The Custom MLP model consists of several fully connected layers, as described:
   - **Total for fc6:** 160 + 10 = 170
 
 ### Total Parameters Calculation
-Adding all the parameters from each layer, we get:
+Adding all the parameters from each layer:
 
 - **Total Parameters for Custom MLP:** 50,240 + 4,160 + 4,160 + 2,080 + 528 + 170 = 61,338
 
