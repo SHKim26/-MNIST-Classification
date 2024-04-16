@@ -1,4 +1,4 @@
-# MNIST-Classification
+# MNIST_Classification
 인공신경망과 딥러닝 
 
 Assignment #2
@@ -9,7 +9,7 @@ shkim@ds.seoultech.ac.kr
 
 # Abstract
 
-This project designs and implements two neural network models, LeNet-5 and CustomMLP, for the MNIST classification. Both models were designed to have a similar number of parameters. **The LeNet-5 model achieved a classification accuracy exceeding 98%, as typically expected.** In contrast, the CustomMLP model recorded an accuracy of 95%. **Batch normalization and Dropout techniques** were applied to LeNet-5 to enhance its generalization performance on the test dataset.
+This project designs and implements two neural network models, LeNet-5 and CustomMLP, for the MNIST classification. Both models were designed to have a similar number of parameters. **The LeNet-5 model achieved a classification accuracy exceeding 98%, as typically expected.** In contrast, the CustomMLP model recorded an accuracy of 95%. **Batch normalization and Dropout techniques** were applied to LeNet-5 to enhance its generalization performance.
 
 # Report
 
@@ -17,7 +17,7 @@ This project designs and implements two neural network models, LeNet-5 and Custo
 ### LeNet-5 Model Architecture
 ![Lenet-5](./images/lenet5.png)
 
-The LeNet-5 model consists of convolutional layers followed by fully connected layers, each designed for image recognition tasks. Below are the details regarding the architecture and the calculation of parameters for each layer:
+The LeNet-5 model consists of convolutional layers followed by fully connected layers, each designed for image classification tasks. Below are the details regarding the architecture and the calculation of parameters for each layer:
 
 #### First Convolutional Layer (`conv1`):
 - **Input Channels:** 1 (grayscale image)
@@ -81,7 +81,7 @@ Adding all the parameters from each layer, we get:
 
 ### Result
 
-The models were trained for 15 epochs using the described structures, and the following results were obtained
+The models were trained for 15 epochs using the described structures, and the following results were obtained.
 
 ![Lenet-5](./images/lenet5_result.png)
 
@@ -147,7 +147,7 @@ Adding all the parameters from each layer, we get:
 
 ### Result
 
-The models were trained for 15 epochs using the described structures, and the following results were obtained
+The models were trained for 15 epochs using the described structures, and the following results were obtained.
 
 ![Lenet-5](./images/custom_mlp_result.png)
 
