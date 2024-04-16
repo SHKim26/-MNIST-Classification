@@ -189,7 +189,7 @@ Dropout is a regularization method that randomly sets a fraction of input units 
 
 ### Result
 
-By employing two regularization techniques, higher generalization performance was achieved.
+**Despite a lower Final Train Accuracy of 98.73%** (vs 99.01%), the application of two regularization techniques resulted in **a higher Final Test Accuracy of 98.81%** (vs 98.73%).
 
 ![Lenet-5](./images/lenet5_regularized_result.png)
 
