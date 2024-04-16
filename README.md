@@ -157,19 +157,19 @@ The models were trained for 15 epochs using the described structures, and the fo
 
 ![Lenet-5](./images/lenet5_regularized.png)
 
-The `LeNet5_Regularized` model incorporates advanced regularization techniques to improve model robustness and generalization. These techniques include Batch Normalization and Dropout, which are applied to various layers within the network. Here is an overview of where and how these techniques are implemented:
+The `LeNet5_Regularized` model employs two regularization techniques, including Batch Normalization and Dropout, to enhance robustness and generalization. Below is an overview of where and how these techniques are implemented:
 
 #### Batch Normalization
 
-Batch Normalization (BatchNorm) is applied to standardize the inputs to each layer within the network. By normalizing the input layer activations, BatchNorm stabilizes the learning process and significantly reduces the number of training epochs required to converge.
+Batch Normalization is applied to standardize the inputs to each layer within the network. By normalizing the input layer activations, Batch Normalization stabilizes the learning process and significantly reduces the number of training epochs required to converge.
 
 - **First Convolutional Layer (`conv1`):**
   - **Structure:** `nn.Conv2d(1, 6, 5, padding=2), nn.BatchNorm2d(6)`
-  - **Details:** After applying a 5x5 convolutional filter with padding, BatchNorm is applied to the 6 feature maps output by the convolution. This helps in normalizing the outputs, accelerating the training and enabling higher learning rates.
+  - **Details:** After applying a 5x5 convolutional filter with padding, Batch Normalization is applied to the 6 feature maps output by the convolution. This helps in normalizing the outputs, accelerating the training, and enabling higher learning rates.
 
 - **Second Convolutional Layer (`conv2`):**
   - **Structure:** `nn.Conv2d(6, 16, 5), nn.BatchNorm2d(16)`
-  - **Details:** Similar to the first layer, after the convolution that increases the depth from 6 to 16, BatchNorm is used to normalize the outputs of the convolutional layer. This reduces internal covariate shift and improves the training dynamics.
+  - **Details:** Similar to the first layer, after the convolution that increases the depth from 6 to 16, Batch Normalization is used to normalize the outputs of the convolutional layer. This reduces internal covariate shift and improves the training dynamics.
 
 #### Dropout
 
@@ -193,7 +193,7 @@ By employing two regularization techniques, higher generalization performance wa
 
 ![Lenet-5](./images/lenet5_regularized_result.png)
 
-## Results
+## Results with Plots
 
 ![Lenet-5](./images/full_result.png)
 
