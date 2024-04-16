@@ -197,4 +197,4 @@ By employing two regularization techniques, higher generalization performance wa
 
 ![Lenet-5](./images/full_result.png)
 
-The results, plotted across epochs, show the training and testing loss and accuracy for three models: LeNet-5, Custom MLP, and LeNet-5_Regularized. **Overall performance ranks  in the following order: LeNet-5_Regularized, LeNet-5, and Custom MLP**. Notably, **the LeNet-5_Regularized model**, which includes batch normalization and dropout, **not only learns faster but also achieves better final performance** compared to LeNet-5.
+The results, plotted across epochs, show the training and testing loss and accuracy for three models. **Overall performance ranks  in the following order: LeNet-5_Regularized, LeNet-5, and Custom MLP**. Notably, **the LeNet-5_Regularized model**, which includes batch normalization and dropout, **not only learns faster but also achieves better final performance** compared to LeNet-5.
